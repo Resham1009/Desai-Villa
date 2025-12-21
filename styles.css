@@ -66,9 +66,24 @@ img {
     align-items: center;
 }
 
-.logo h2 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo:hover .logo-image {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 12px rgba(255, 107, 53, 0.4));
 }
 
 .nav-menu {
@@ -88,6 +103,46 @@ img {
 
 .nav-link:hover {
     color: var(--primary-color);
+}
+
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid #e0e0e0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.instagram-link {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.instagram-link:hover {
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
+}
+
+.facebook-link {
+    background: #1877f2;
+}
+
+.facebook-link:hover {
+    transform: translateY(-2px) scale(1.1);
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.4);
 }
 
 .nav-account {
@@ -1224,6 +1279,23 @@ img {
         font-size: 1.1rem;
     }
 
+    .nav-social {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
     .nav-account {
         display: none;
     }
@@ -1337,8 +1409,9 @@ img {
         padding: 0 1rem;
     }
 
-    .logo h2 {
-        font-size: 1.2rem;
+    .logo-image {
+        height: 40px;
+        max-width: 150px;
     }
 
     .hero-section {
