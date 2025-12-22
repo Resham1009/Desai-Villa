@@ -538,6 +538,11 @@ body.landing-page .navbar {
         gap: 1.5rem;
     }
 
+    .place-image {
+        width: 100px;
+        height: 100px;
+    }
+
     .rules-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1176,14 +1181,14 @@ body.landing-page .navbar {
 
 .places-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
 }
 
 .place-card {
     background: linear-gradient(135deg, var(--white) 0%, #fafafa 100%);
     border-radius: 15px;
-    padding: 1.5rem 1.2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
@@ -1193,7 +1198,7 @@ body.landing-page .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .place-card::before {
@@ -1243,7 +1248,7 @@ body.landing-page .navbar {
 
 .place-name {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 700;
     margin: 0;
     transition: color 0.3s ease;
@@ -1256,10 +1261,46 @@ body.landing-page .navbar {
 
 .place-type {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: 1rem;
     opacity: 1;
     margin: 0;
     font-weight: 500;
+    line-height: 1.4;
+}
+
+.place-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 4px;
+}
+
+.place-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.place-card:hover .place-image {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(255, 140, 66, 0.5);
+}
+
+.place-distance {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    margin: 0.5rem 0 0 0;
+    font-weight: 600;
     line-height: 1.4;
 }
 
@@ -1515,11 +1556,16 @@ body.landing-page .navbar {
 
 .category-title {
     color: var(--primary-color);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin: 0;
     font-weight: 700;
     letter-spacing: 0.5px;
     flex: 1;
+}
+
+.menu-breakfast {
+    border: 3px solid #FFD700;
+    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
 }
 
 .menu-breakfast .category-title {
@@ -1537,7 +1583,7 @@ body.landing-page .navbar {
 }
 
 .menu-items li {
-    padding: 1rem 0.5rem;
+    padding: 0.3rem 0.5rem;
     color: var(--text-color);
     border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
     position: relative;
@@ -1546,7 +1592,7 @@ body.landing-page .navbar {
     gap: 0.8rem;
     transition: all 0.3s ease;
     border-radius: 8px;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0;
     font-weight: 500;
 }
 
@@ -1713,6 +1759,7 @@ body.landing-page .navbar {
     justify-content: center;
     gap: 1rem;
     transition: all 0.3s ease;
+    flex-direction: column;
 }
 
 .menu-note:hover {
@@ -1732,6 +1779,21 @@ body.landing-page .navbar {
     margin: 0;
     line-height: 1.8;
     font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    text-align: left;
+}
+
+.menu-note p:not(:last-child) {
+    margin-bottom: 0.8rem;
+}
+
+.menu-note p i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
 }
 
 
@@ -2031,8 +2093,18 @@ body.landing-page .navbar {
         font-size: 1.2rem;
     }
 
+    .place-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 0.6rem;
+    }
+
     .place-name {
         font-size: 1rem;
+    }
+
+    .place-distance {
+        font-size: 0.8rem;
     }
 
     .rules-grid {
