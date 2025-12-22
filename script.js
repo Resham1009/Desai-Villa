@@ -149,7 +149,7 @@ if (villaElement) {
 }
 
 // Section order for navigation
-const sectionOrder = ['home', 'amenities', 'places-nearby', 'rules', 'menu', 'contact'];
+const sectionOrder = ['home', 'amenities', 'places-nearby', 'rules', 'terms', 'menu', 'contact'];
 
 // Function to get current section ID
 function getCurrentSectionId() {
@@ -227,6 +227,22 @@ if (nextSectionArrowContent) {
     nextSectionArrowContent.addEventListener('click', function(e) {
         e.preventDefault();
         goToNextSection();
+    });
+}
+
+// Menu link in Terms section
+const menuLink = document.querySelector('.menu-link');
+if (menuLink) {
+    menuLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showSection('menu');
+        
+        // Update active state
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        const menuNavLink = document.querySelector('a[href="#menu"]');
+        if (menuNavLink) {
+            menuNavLink.classList.add('active');
+        }
     });
 }
 

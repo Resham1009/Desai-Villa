@@ -1319,6 +1319,101 @@ body.landing-page .navbar {
 }
 
 /* Menu Section */
+.terms-section {
+    background: var(--light-bg);
+}
+
+.terms-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.terms-policy {
+    margin-bottom: 2.5rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.policy-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid;
+}
+
+.payment-policy {
+    color: #0066cc;
+    border-bottom-color: #0066cc;
+}
+
+.cancellation-policy {
+    color: #dc3545;
+    border-bottom-color: #dc3545;
+}
+
+.relocation-policy {
+    color: #dc3545;
+    border-bottom-color: #dc3545;
+}
+
+.food-policy {
+    color: #28a745;
+    border-bottom-color: #28a745;
+}
+
+.video-policy {
+    color: #0066cc;
+    border-bottom-color: #0066cc;
+    text-align: center;
+}
+
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.policy-list li i {
+    color: var(--primary-color);
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+}
+
+.menu-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+    color: var(--secondary-color);
+}
+
+.video-note {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.05rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 140, 66, 0.1);
+    border-radius: 10px;
+}
+
 .menu-section {
     background: var(--light-bg);
     position: relative;
