@@ -11,12 +11,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <img src="WhatsApp Image 2025-12-11 at 6.34.23 PM.jpeg" alt="Desai Villa" class="logo-image">
-            </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#home" class="nav-link">About Us</a></li>
                 <li><a href="#amenities" class="nav-link">Amenities</a></li>
+                <li><a href="#places-nearby" class="nav-link">Places Nearby</a></li>
                 <li><a href="#rules" class="nav-link">Rules</a></li>
                 <li><a href="#menu" class="nav-link">Menu</a></li>
                 <li><a href="#contact" class="nav-link">Contact Us</a></li>
@@ -26,6 +24,12 @@
                     </a>
                     <a href="https://www.facebook.com/profile.php?id=61582445804937" class="social-link facebook-link" target="_blank" aria-label="Facebook">
                         <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/9657729278" class="social-link whatsapp-link" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:9657729278" class="social-link phone-link" aria-label="Call">
+                        <i class="fas fa-phone-alt"></i>
                     </a>
                 </li>
             </ul>
@@ -37,29 +41,72 @@
         </div>
     </nav>
 
+    <!-- Hero Section with Villa Name -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <img src="WhatsApp Image 2025-12-11 at 6.34.23 PM.jpeg" alt="Desai Villa" class="villa-logo">
+            <button class="next-section-arrow" id="nextSectionArrow" aria-label="Go to About Us">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main>
+    <main id="mainContent" style="display: none;">
+        <!-- Navigation Arrows -->
+        <button class="nav-arrow nav-arrow-left" id="prevSectionArrow" aria-label="Previous Section">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow nav-arrow-right" id="nextSectionArrowContent" aria-label="Next Section">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
         <!-- Gallery Section -->
-        <section id="home" class="gallery-section">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery-container">
-                <div class="gallery-item" data-scroll>
-                    <img src="unnamed.png" alt="Desai Villa Image 1" loading="lazy">
+        <section id="home" class="content-section gallery-section" style="display: none;">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience the beauty of Desai Villa</h2>
                 </div>
-                <div class="gallery-item" data-scroll>
-                    <img src="8.png" alt="Desai Villa Image 2" loading="lazy">
+                <div class="gallery-container">
+                    <div class="gallery-item" data-scroll>
+                        <img src="unnamed.png" alt="Desai Villa Image 1" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-scroll>
+                        <img src="8.png" alt="Desai Villa Image 2" loading="lazy">
+                    </div>
+                    <div class="gallery-item" data-scroll>
+                        <img src="2023-02-22.png" alt="Desai Villa Image 3" loading="lazy">
+                    </div>
                 </div>
-                <div class="gallery-item" data-scroll>
-                    <img src="2023-02-22.png" alt="Desai Villa Image 3" loading="lazy">
+            </div>
+
+            <!-- Desai Villa Video Section -->
+            <div class="video-section-home">
+                <div class="section-container">
+                    <div class="section-header">
+                        <h2 class="section-title">Desai Villa Video</h2>
+                        <p class="section-description">Take a virtual tour of our beautiful villa</p>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/8qCVXCFREkQ?start=5"
+                            title="Desai Villa Video" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Amenities Section -->
-        <section id="amenities" class="amenities-section">
-            <h2 class="section-title">Amenities</h2>
-            <div class="amenities-content">
-                <div class="amenities-grid">
+        <section id="amenities" class="content-section amenities-section" style="display: none;">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Facilities we provide</h2>
+                </div>
+                <div class="amenities-content">
+                    <div class="amenities-grid">
                     <div class="amenity-item">
                         <div class="amenity-icon">
                             <i class="fas fa-swimming-pool"></i>
@@ -154,46 +201,127 @@
             </div>
         </section>
 
+        <!-- Places Nearby Section -->
+        <section id="places-nearby" class="content-section places-nearby-section" style="display: none;">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Seight seeing</h2>
+                </div>
+                <div class="places-nearby-content">
+                    <div class="places-grid">
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h3 class="place-name">Lohagaon</h3>
+                            <p class="place-type">Fort & Trekking</p>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h3 class="place-name">Visapur</h3>
+                            <p class="place-type">Fort & Trekking</p>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h3 class="place-name">Tikona</h3>
+                            <p class="place-type">Fort & Trekking</p>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h3 class="place-name">Rajmachi</h3>
+                            <p class="place-type">Fort & Trekking</p>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-monument"></i>
+                            </div>
+                            <h3 class="place-name">Karla Caves</h3>
+                            <p class="place-type">Historical Caves</p>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-monument"></i>
+                            </div>
+                            <h3 class="place-name">Bhaja Buddhist Caves</h3>
+                            <p class="place-type">Historical Caves</p>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-temple-hindu"></i>
+                            </div>
+                            <h3 class="place-name">Shirgaon (Prati Shirdi)</h3>
+                            <p class="place-type">Temple</p>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h3 class="place-name">Pavana Lake</h3>
+                            <p class="place-type">Lake & Scenic View</p>
+                        </div>
+                        <div class="place-card">
+                            <div class="place-icon">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <h3 class="place-name">Gahunge Stadium</h3>
+                            <p class="place-type">Sports Venue</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Rules Section -->
-        <section id="rules" class="rules-section">
-            <h2 class="section-title">Rules</h2>
-            <div class="rules-content">
-                <div class="info-card">
+        <section id="rules" class="content-section rules-section" style="display: none;">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Rules & Guidelines</h2>
+                </div>
+                <div class="rules-content">
+                    <div class="info-card rules-card">
                     <h3 class="card-title">
                         <i class="fas fa-clipboard-list"></i> Villa Rules & Guidelines
                     </h3>
                     <div class="rules-list">
-                        <div class="rule-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Check-in time: 2:00 PM | Check-out time: 11:00 AM</p>
-                        </div>
-                        <div class="rule-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Maximum occupancy: 20 people</p>
-                        </div>
-                        <div class="rule-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>No smoking inside the villa premises</p>
-                        </div>
-                        <div class="rule-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Pets are not allowed</p>
-                        </div>
-                        <div class="rule-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Quiet hours: 10:00 PM to 7:00 AM</p>
-                        </div>
-                        <div class="rule-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Guests are responsible for any damages</p>
-                        </div>
-                        <div class="rule-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>Parking available for up to 4 vehicles</p>
-                        </div>
-                        <div class="rule-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p>No parties or events without prior permission</p>
+                        <div class="rules-grid">
+                            <div class="rule-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Check-in time: 2:00 PM | Check-out time: 11:00 AM</p>
+                            </div>
+                            <div class="rule-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Maximum occupancy: 20 people</p>
+                            </div>
+                            <div class="rule-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>No smoking inside the villa premises</p>
+                            </div>
+                            <div class="rule-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Pets are not allowed</p>
+                            </div>
+                            <div class="rule-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Quiet hours: 10:00 PM to 7:00 AM</p>
+                            </div>
+                            <div class="rule-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Guests are responsible for any damages</p>
+                            </div>
+                            <div class="rule-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Parking available for up to 4 vehicles</p>
+                            </div>
+                            <div class="rule-item">
+                                <i class="fas fa-check-circle"></i>
+                                <p>No parties or events without prior permission</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,11 +329,11 @@
         </section>
 
         <!-- Menu Section -->
-        <section id="menu" class="menu-section">
-            <div class="menu-header">
-                <h2 class="section-title">Our Delicious Menu</h2>
-                <p class="menu-subtitle">Fresh • Authentic • Flavorful</p>
-            </div>
+        <section id="menu" class="content-section menu-section" style="display: none;">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Delicious Menu</h2>
+                </div>
             <div class="menu-content">
                 <div class="menu-grid">
                     <!-- Breakfast -->
@@ -280,9 +408,12 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-grid">
+        <section id="contact" class="content-section contact-section" style="display: none;">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Get in touch for bookings and inquiries</h2>
+                </div>
+                <div class="contact-grid">
                 <!-- Rates Card -->
                 <div class="info-card rates-info-card">
                     <!-- Minimum Booking Requirements -->
@@ -321,11 +452,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="whatsapp-wrapper">
-                        <a href="https://wa.me/9657729278" class="btn-whatsapp" target="_blank">
-                            <i class="fab fa-whatsapp"></i> Message us on WhatsApp
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Address Card -->
@@ -359,16 +485,20 @@
         </section>
 
         <!-- VIDEO SECTION -->
-        <section class="video-section-full">
-            <h2 class="section-title">Desai Villa Video</h2>
+        <section id="video" class="content-section video-section-full" style="display: none;">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Desai Villa Video</h2>
+                    <p class="section-description">Take a virtual tour of our beautiful villa</p>
+                </div>
 
-            <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8qCVXCFREkQ?start=5"
-                    title="Desai Villa Video" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8qCVXCFREkQ?start=5"
+                        title="Desai Villa Video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </section>
     </main>
