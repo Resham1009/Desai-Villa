@@ -571,10 +571,24 @@ body.landing-page .navbar {
 }
 
 .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
+    display: flex;             /* Change from grid to flex */
+    overflow-x: auto;          /* Enable horizontal scroll */
+    scroll-snap-type: x mandatory; /* Makes images "snap" into place */
+    gap: 1.5rem;
+    padding: 1rem 0;
+    scrollbar-width: none;     /* Hide scrollbar for Firefox */
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;             /* Hide scrollbar for Chrome/Safari */
+}
+
+.gallery-item {
+    flex: 0 0 calc(33.33% - 1rem); /* Force 3 items per view */
+    scroll-snap-align: start;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0.3;              /* Dim images by default */
+    transform: scale(0.9);     /* Slightly smaller by default */
 }
 
 @media (max-width: 1024px) {
